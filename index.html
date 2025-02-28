@@ -1,45 +1,295 @@
-<!--
-  Hit RUN to see this project in action!
-  
-  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
--->
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
+  <title>Drive-in</title>
 </head>
+<body class="bg-gray-100">
 
-<body>
-  <main>
-    <h1 class="title">Welcome to HTML on Replit!</h1>
-    <p class="description">Get started by editing
-      <code class="code">index.html</code>. The webview will auto-refresh as you edit! (See <code
-        class="code">README.md</code> if you want to
-      disable auto-refresh.)
-    </p>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold text-blue-600">🚗 Drive-in</span>
+    </div>
+    <div class="hidden md:flex space-x-6">
+      <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Home</a>
+      <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">License</a>
+      <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Renew</a>
+      <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Knowledge Test</a>
+    </div>
+    <button class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
+      Start Test
+    </button>
+  </nav>
 
-    <section class="grid">
-      <a href="https://replit.com/learn" class='card'>
-        <h2>Learn &rarr;</h2>
-        <p>Find tutorials on Replit to learn more.</p>
-      </a>
+  <!-- Hero Section -->
+  <section class="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-12 py-16 lg:py-24 gap-12 lg:gap-24">
+    <div class="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        Get Your License & <br> Drive with <span class="text-blue-600">Confidence!</span>
+      </h2>
+      <p class="text-gray-600 text-lg">
+        Practice official driving tests, apply for a learner’s license, and renew your license while increasing your knowledge.
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 mt-6">
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
+          Start Test
+        </button>
+        <button class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition">
+          Renew License
+        </button>
+      </div>
+    </div>
+    <div class="w-full lg:w-[60%] flex justify-end">
+      <video src="Images/heroImage.mp4" alt="Driving Test" class="rounded-lg shadow-lg w-full h-550 object-cover">
+    </div>
+  </section>
+  
 
-      <a href="https://docs.replit.com/category/deployments" class='card'>
-        <h2>Deploy &rarr;</h2>
-        <p>
-          After you are happy with this app, deploy it on Replit!
+  <!-- Features Section -->
+
+  
+  <section class="container mx-auto px-6 md:px-12 py-16 lg:py-24">
+    <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">
+      Why Choose <span class="text-blue-600">Drive-in?</span>
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="Images/renewImage.jpg" alt="Renew License" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-semibold text-gray-900">Renew License</h3>
+          <p class="text-gray-600 mt-2">Easily renew your driving license online with quick processing.</p>
+          <button class="mt-4 bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-orange-600 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="Images/knowledgeImage.jpg" alt="Knowledge Test" class="w-full h-150 object-cover">
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-semibold text-gray-900">Knowledge Test</h3>
+          <p class="text-gray-600 mt-2">Practice official driving tests and improve your knowledge.</p>
+          <button class="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
+            Start Test
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+        <img src="Images/licenseImage.jpg" alt="Get License" class="w-full h-56 object-cover">
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-semibold text-gray-900">Get Your License</h3>
+          <p class="text-gray-600 mt-2">Apply for a learner’s license and get started with your driving journey.</p>
+          <button class="mt-4 bg-green-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-green-700 transition">
+            Apply Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+
+  
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 lg:py-24">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        About <span class="text-yellow-300">Us</span>
+      </h2>
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Image -->
+        <div class="w-full lg:w-1/2">
+          <img src="Images/aboutImage.jpg" alt="About Us" class="rounded-lg shadow-lg w-full object-cover">
+        </div>
+        <!-- Text Content -->
+        <div class="w-full lg:w-1/2 space-y-6">
+          <p class="text-lg leading-relaxed">
+            At <strong class="text-yellow-300">Drive-in</strong>, we are committed to making the driving test process seamless and stress-free. Our platform provides **practice tests, license renewal assistance,** and **knowledge-building resources.**
+          </p>
+          <p class="text-lg leading-relaxed">
+            With years of experience, we ensure that aspiring drivers feel confident and well-prepared to get behind the wheel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission Section -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">
+        Our <span class="text-blue-600">Mission</span>
+      </h2>
+      <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        Our mission is to empower individuals with the **knowledge and skills** they need to become responsible drivers. 
+        By providing **high-quality resources, realistic test simulations,** and a **user-friendly experience,** we aim to make the journey to obtaining a driver's license **simple and efficient.**
+      </p>
+    </div>
+  </section>
+   
+  <section class=" m-b-50 flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto py-12 px-6">
+      <!-- Left Side: Image -->
+      <div class="w-full md:w-1/2">
+          <img src="Images/Image.png" alt="Driving Knowledge" class="rounded-lg shadow-lg mr-40">
+      </div>
+
+      <!-- Right Side: Text Content -->
+      <div class="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10">
+          <h2 class="text-3xl font-bold text-gray-800">Enhance Your Driving Knowledge</h2>
+          <p class="text-gray-600 mt-4">
+              Test your driving skills and knowledge with our interactive quizzes. 
+              Get prepared for your driving test with real-world scenarios and essential rules.
+          </p>
+          <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+              Start Test
+          </button>
+      </div>
+  </section>
+
+
+      <!-- Registration Form -->
+  <section class=" bg-blue-700 container mx-auto px-6 md:px-12 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="bg-white p-8 shadow-xl rounded-xl">
+        <h3 class="text-3xl font-semibold text-blue-700 mb-6">License Registration</h3>
+        <p class="text-gray-600 mb-8">Register your license with our secure online verification system.</p>
+        <form class="space-y-6">
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+            <input type="text" placeholder="Enter your full name" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">License Number</label>
+            <input type="text" placeholder="Enter License Number" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Upload License Photo</label>
+            <input type="file" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+            Register Now
+          </button>
+        </form>
+        <p class="text-gray-500 mt-6 text-sm">Your registration will be verified within 24 hours.</p>
+      </div>
+
+      <!-- Registration Info & Image -->
+      <div class="space-y-6">
+        <img src="Images/regestrationImage.jpg" alt="License Registration" class="rounded-lg shadow-lg w-full object-cover">
+        <div class="bg-white p-6 shadow-md rounded-xl">
+          <h3 class="text-xl font-semibold text-blue-700 mb-4">Registration Info</h3>
+          <p class="text-gray-600"><strong>✅ Secure Payment:</strong> Processed via Razorpay</p>
+          <p class="text-gray-600"><strong>📄 Documents Required:</strong> License Photo, ID Proof</p>
+          <p class="text-gray-600"><strong>⏳ Verification Time:</strong> 24 Hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container mx-auto px-6 md:px-12 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Contact Form -->
+      <div class="bg-white p-8 shadow-xl rounded-xl">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Full Name</label>
+            <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Email Address</label>
+            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Message</label>
+            <textarea rows="4" placeholder="Write your message..." class="w-full px-4 py-3 border rounded-lg focus:ring focus:ring-blue-300"></textarea>
+          </div>
+          <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info & Image -->
+      <div class="space-y-6">
+        <img src="Images/contactImage.jpg" alt="Contact Us" class="rounded-lg shadow-lg w-full object-cover">
+        <div class="bg-white p-6 shadow-md rounded-xl">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
+          <p class="text-gray-600"><strong>📍 Address:</strong> 123 Main Street, Your City, Country</p>
+          <p class="text-gray-600"><strong>📞 Phone:</strong> +1 234 567 890</p>
+          <p class="text-gray-600"><strong>📧 Email:</strong> contact@yourcompany.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gradient-to-r from-blue-800 to-blue-900 text-white py-12">
+    <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Brand Info -->
+      <div>
+        <h3 class="text-2xl font-bold text-white">🚗 Drive-In</h3>
+        <p class="mt-3 text-gray-300 leading-relaxed">
+          Making the driving test process seamless and stress-free with expert guidance and real-time test simulations.
         </p>
-      </a>
-    </section>
-  </main>
+      </div>
 
-  <script type="module" src="script.js"></script>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#" class="hover:text-gray-300 transition">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300 transition">Practice Tests</a></li>
+          <li><a href="#" class="hover:text-gray-300 transition">License Renewal</a></li>
+          <li><a href="#" class="hover:text-gray-300 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold text-white">Contact Us</h3>
+        <p class="mt-3 text-gray-300"><strong>📍 Address:</strong> 456 Drive Lane, City, Country</p>
+        <p class="text-gray-300"><strong>📞 Phone:</strong> +1 800 555 6789</p>
+        <p class="text-gray-300"><strong>📧 Email:</strong> support@drivein.com</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-semibold text-white">Stay Updated</h3>
+        <p class="mt-3 text-gray-300">Subscribe to get the latest updates on driving tips and test information.</p>
+        <div class="mt-4 flex">
+          <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full rounded-l-lg text-gray-900">
+          <button class="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded-r-lg text-white font-bold">
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Social Media & Copyright -->
+    <div class="border-t border-gray-600 mt-10 pt-6 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="text-gray-300 hover:text-yellow-400 transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-300 hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-300 hover:text-yellow-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-300 hover:text-yellow-400 transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="text-gray-400">&copy; 2024 Drive-In. All rights reserved.</p>
+    </div>
+  </footer>
+
+
 
 </body>
-
 </html>
